@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CineFlow - Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="h-screen w-screen flex overflow-hidden bg-[#0a0a0a] text-sm">
+
+    <aside class="w-64 bg-[#141414] border-r border-white/5 flex flex-col justify-between h-full shrink-0">
+        <div>
+            <div class="h-20 flex items-center px-8 border-b border-white/5">
+                <i class="fa-solid fa-film text-[#e50914] text-2xl mr-3"></i>
+                <h1 class="font-display font-bold text-2xl text-white tracking-tighter uppercase">CineFlow</h1>
+            </div>
+            <nav class="mt-8 px-4 space-y-2">
+                <a href="dashboard.html" class="nav-item flex items-center gap-4 px-4 py-3 text-[#808080] hover:text-white rounded-lg transition-all">
+                    <i class="fa-solid fa-chart-line w-5"></i> Dashboard
+                </a>
+                <a href="analytics.html" class="nav-item active flex items-center gap-4 px-4 py-3 rounded-lg transition-all text-white bg-white/5">
+                    <i class="fa-solid fa-chart-pie w-5 text-[#e50914]"></i> Analytics
+                </a>
+                <a href="reports.html" class="nav-item flex items-center gap-4 px-4 py-3 text-[#808080] hover:text-white rounded-lg transition-all">
+                    <i class="fa-solid fa-file-lines w-5"></i> Reports
+                </a>
+            </nav>
+        </div>
+        
+        <div class="p-4 border-t border-white/5 space-y-2">
+            <a href="profile.html" class="flex items-center gap-4 px-4 py-2 text-[#808080] hover:text-white text-xs transition-colors">
+                <i class="fa-solid fa-user-gear"></i> Profile Settings
+            </a>
+            <a href="../../login.html" class="flex items-center gap-4 px-4 py-2 text-[#808080] hover:text-[#e50914] text-xs transition-colors">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+        <header class="h-20 flex items-center justify-between px-8 border-b border-white/5 bg-[#0a0a0a]/80 backdrop-blur-md">
+            <div class="flex items-center bg-[#141414] px-4 py-2 rounded-lg border border-white/5 w-96">
+                <i class="fa-solid fa-magnifying-glass text-[#808080] mr-3"></i>
+                <input type="text" placeholder="Search analytics..." class="bg-transparent border-none outline-none text-white text-xs w-full">
+            </div>
+            <button class="bg-[#e50914] px-5 py-2 rounded-lg font-medium text-white hover:bg-red-700 transition-all text-xs">
+                Export Data
+            </button>
+        </header>
+        
+        <main class="flex-1 p-8 overflow-y-auto">
+    <header class="mb-8">
+        <h2 class="text-3xl font-display font-bold text-white uppercase tracking-tight">Pipeline Analytics</h2>
+        <p class="text-[#808080]">Real-time telemetry for render farm clusters and data ingestion.</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="glass-panel p-6 rounded-xl border border-white/5 bg-[#141414]">
+            <p class="text-[#808080] text-[10px] uppercase font-bold tracking-widest mb-1">Avg. Frame Render Time</p>
+            <h3 class="text-2xl font-display font-bold text-white">4m 12s</h3>
+            <div class="mt-2 flex items-center gap-2 text-green-500 text-[10px]">
+                <i class="fa-solid fa-bolt"></i> Optimized (Cycles Engine)
+            </div>
+        </div>
+        <div class="glass-panel p-6 rounded-xl border border-white/5 bg-[#141414]">
+            <p class="text-[#808080] text-[10px] uppercase font-bold tracking-widest mb-1">Dailies Sync Speed</p>
+            <h3 class="text-2xl font-display font-bold text-white">1.4 GB/s</h3>
+            <div class="mt-2 flex items-center gap-2 text-[#e50914] text-[10px]">
+                <i class="fa-solid fa-arrow-up"></i> High-speed 10GbE Link
+            </div>
+        </div>
+        <div class="glass-panel p-6 rounded-xl border border-white/5 bg-[#141414]">
+            <p class="text-[#808080] text-[10px] uppercase font-bold tracking-widest mb-1">Pipeline Uptime</p>
+            <h3 class="text-2xl font-display font-bold text-white">99.98%</h3>
+            <div class="mt-2 flex items-center gap-2 text-blue-500 text-[10px]">
+                <i class="fa-solid fa-server"></i> 24 Active Render Nodes
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="glass-panel rounded-2xl border border-white/5 bg-[#141414] overflow-hidden">
+            <div class="px-6 py-4 border-b border-white/5">
+                <h3 class="text-white font-bold uppercase tracking-widest text-xs">VFX Shot Completion (by Dept)</h3>
+            </div>
+            <div class="h-64 flex flex-col items-center justify-center bg-white/[0.02] border-dashed border-2 border-white/5 m-6 rounded-xl text-center px-4">
+                <i class="fa-solid fa-layer-group text-white/20 text-4xl mb-3"></i>
+                <span class="text-[#808080] font-mono text-[10px] uppercase tracking-tighter">
+                    Bar Chart Placeholder
+                </span>
+            </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl border border-white/5 bg-[#141414] overflow-hidden">
+            <div class="px-6 py-4 border-b border-white/5">
+                <h3 class="text-white font-bold uppercase tracking-widest text-xs">Storage: RAW vs Proxies vs VFX</h3>
+            </div>
+            <div class="h-64 flex flex-col items-center justify-center bg-white/[0.02] border-dashed border-2 border-white/5 m-6 rounded-xl text-center px-4">
+                <i class="fa-solid fa-hard-drive text-white/20 text-4xl mb-3"></i>
+                <span class="text-[#808080] font-mono text-[10px] uppercase tracking-tighter">
+                    Pie Chart Placeholder
+                </span>
+            </div>
+        </div>
+    </div>
+</main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="h-screen w-screen flex overflow-hidden bg-[#0a0a0a] text-sm">
+
+    <aside class="w-64 bg-[#141414] border-r border-white/5 flex flex-col justify-between h-full shrink-0">
+        <div>
+            <div class="h-20 flex items-center px-8 border-b border-white/5">
+                <i class="fa-solid fa-film text-[#e50914] text-2xl mr-3"></i>
+                <h1 class="font-display font-bold text-2xl text-white tracking-tighter uppercase">CineFlow</h1>
+            </div>
+            <nav class="mt-8 px-4 space-y-2">
+                <a href="dashboard.html" class="nav-item flex items-center gap-4 px-4 py-3 text-[#808080] hover:text-white rounded-lg transition-all">
+                    <i class="fa-solid fa-chart-line w-5"></i> Dashboard
+                </a>
+                <a href="analytics.html" class="nav-item flex items-center gap-4 px-4 py-3 text-[#808080] hover:text-white rounded-lg transition-all">
+                    <i class="fa-solid fa-chart-pie w-5"></i> Analytics
+                </a>
+                <a href="reports.html" class="nav-item active flex items-center gap-4 px-4 py-3 rounded-lg transition-all text-white bg-white/5">
+                    <i class="fa-solid fa-file-lines w-5 text-[#e50914]"></i> Reports
+                </a>
+            </nav>
+        </div>
+        
+        <div class="p-4 border-t border-white/5 space-y-2">
+            <a href="profile.html" class="flex items-center gap-4 px-4 py-2 text-[#808080] hover:text-white text-xs transition-colors">
+                <i class="fa-solid fa-user-gear"></i> Profile Settings
+            </a>
+            <a href="../../login.html" class="flex items-center gap-4 px-4 py-2 text-[#808080] hover:text-[#e50914] text-xs transition-colors">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+        <header class="h-20 flex items-center justify-between px-8 border-b border-white/5 bg-[#0a0a0a]/80 backdrop-blur-md">
+            <div class="flex items-center bg-[#141414] px-4 py-2 rounded-lg border border-white/5 w-96">
+                <i class="fa-solid fa-magnifying-glass text-[#808080] mr-3"></i>
+                <input type="text" placeholder="Search reports..." class="bg-transparent border-none outline-none text-white text-xs w-full">
+            </div>
+            <button class="bg-[#e50914] px-5 py-2 rounded-lg font-medium text-white hover:bg-red-700 transition-all text-xs">
+                Generate Report
+            </button>
+        </header>
+        
+        <main class="flex-1 p-8 overflow-y-auto">
+    <header class="mb-8">
+        <h2 class="text-3xl font-display font-bold text-white uppercase tracking-tight">Production Logs</h2>
+        <p class="text-[#808080]">Daily wrap reports, gear health, and creative documentation logs.</p>
+    </header>
+    
+    <div class="glass-panel rounded-xl border border-white/5 bg-[#141414] overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="text-[#808080] text-[10px] uppercase tracking-widest border-b border-white/5 bg-white/[0.02]">
+                        <th class="px-6 py-4 font-bold">Log ID</th>
+                        <th class="px-6 py-4 font-bold">Log Type</th>
+                        <th class="px-6 py-4 font-bold">Unit/Location</th>
+                        <th class="px-6 py-4 font-bold">Production Date</th>
+                        <th class="px-6 py-4 font-bold">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-white text-xs divide-y divide-white/5">
+                    <tr class="hover:bg-white/[0.02] transition-colors">
+                        <td class="px-6 py-4 font-mono text-[#e50914]">#LOG-882</td>
+                        <td class="px-6 py-4 font-medium">Daily Production Wrap - Day 14</td>
+                        <td class="px-6 py-4 text-[#808080]">Main Unit / Stage 4</td>
+                        <td class="px-6 py-4 text-[#808080]">Mar 12, 2026</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold">Approved</span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/[0.02] transition-colors">
+                        <td class="px-6 py-4 font-mono text-[#e50914]">#LOG-741</td>
+                        <td class="px-6 py-4 font-medium">Anamorphic Lens Calibration Issue</td>
+                        <td class="px-6 py-4 text-[#808080]">Camera Dept / Exterior</td>
+                        <td class="px-6 py-4 text-[#808080]">Mar 11, 2026</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold">Critical</span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/[0.02] transition-colors">
+                        <td class="px-6 py-4 font-mono text-[#e50914]">#LOG-902</td>
+                        <td class="px-6 py-4 font-medium">Dailies Sync & Color Metadata</td>
+                        <td class="px-6 py-4 text-[#808080]">Post-Production Lab</td>
+                        <td class="px-6 py-4 text-[#808080]">Mar 10, 2026</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full bg-blue-500/10 text-blue-500 text-[10px] font-bold">In Review</span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/[0.02] transition-colors">
+                        <td class="px-6 py-4 font-mono text-[#e50914]">#LOG-115</td>
+                        <td class="px-6 py-4 font-medium">Script Revision Memo - Scene 42A</td>
+                        <td class="px-6 py-4 text-[#808080]">Writer's Room</td>
+                        <td class="px-6 py-4 text-[#808080]">Mar 09, 2026</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full bg-green-500/10 text-green-500 text-[10px] font-bold">Distributed</span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-white/[0.02] transition-colors">
+                        <td class="px-6 py-4 font-mono text-[#e50914]">#LOG-334</td>
+                        <td class="px-6 py-4 font-medium">Sound Mixer Field Notes</td>
+                        <td class="px-6 py-4 text-[#808080]">B-Unit / On Location</td>
+                        <td class="px-6 py-4 text-[#808080]">Mar 08, 2026</td>
+                        <td class="px-6 py-4">
+                            <span class="px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-500 text-[10px] font-bold">Pending</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+    </div>
+</body>
+</html>

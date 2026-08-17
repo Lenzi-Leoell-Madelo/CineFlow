@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CineFlow - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="login-screen-bg" class="h-screen flex items-center justify-center">
+    <div class="bg-cine-panel/90 backdrop-blur-xl p-8 rounded-2xl border border-white/10 w-full max-w-md shadow-2xl">
+        <div class="text-center mb-8">
+            <i class="fa-solid fa-film text-[#e50914] text-4xl mb-4"></i>
+            <h1 class="font-display font-bold text-3xl text-white tracking-tight">CineFlow</h1>
+        </div>
+        <form action="assets/admin/dashboard.html" class="space-y-6">
+            <div class="relative input-group">
+                <input type="email" id="email" placeholder=" " required class="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e50914] peer">
+                <label for="email" class="absolute left-4 top-3 text-[#808080] transition-all duration-200 pointer-events-none">Email Address</label>
+            </div>
+            <div class="relative input-group">
+                <input type="password" id="password" placeholder=" " required class="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#e50914] peer">
+                <label for="password" class="absolute left-4 top-3 text-[#808080] transition-all duration-200 pointer-events-none">Password</label>
+            </div>
+            <button type="submit" class="w-full bg-[#e50914] hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2">
+                Sign In <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </form>
+        <div class="mt-8 pt-6 border-t border-white/5 text-center text-xs">
+            <p class="text-[#808080]">Don't have an account? <a href="signup.html" class="text-white hover:text-[#e50914]">Request Access</a></p>
+        </div>
+    </div>
+</body>
+</html>
